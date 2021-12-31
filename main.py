@@ -34,6 +34,7 @@ faces_conhecidas_nomes = ["Nicolas Cage", "Jimin",
 video_capture = cv2.VideoCapture(0)
 video_capture.set(3, 640)
 video_capture.set(4, 480)
+
 # ---------------------- CONSTANTES PARA AS EMOÇÕES ---------------------- #
 net = cv2
 model = './emotion-ferplus-8.onnx'
@@ -62,7 +63,6 @@ def descobre_emocao(image):
         predicted_emotion = emocoes[prob.argmax()]
         cv2.putText(img_copy, '{}'.format(predicted_emotion), (x, y+h-x),cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255),2, cv2.LINE_AA)
     return img_copy
-  
 
 # ---------------------- CONSTANTES PARA O BACKGROUND ---------------------- #
 segmentor = SelfiSegmentation()
@@ -96,6 +96,7 @@ while True:
 
     # ---------------------- EXPRESSÃO FACIAL ------------------------ #
     expressao = descobre_emocao(frame)
+
     # --------------------------- CROMAKEY --------------------------- #
     imgOut = segmentor.removeBG(expressao, imgList[indexImg], threshold=0.8)
     key = cv2.waitKey(1)
@@ -105,7 +106,7 @@ while True:
     elif key == ord('d'):
         if indexImg < len(imgList)-1:
             indexImg += 1
-    cv2.imshow('Webcam', imgOut)
+    cv2.imshow('WEBCAM', imgOut)
     if key == ord('q'):
         break
 

@@ -33,11 +33,15 @@ sudo apt-get install python3-dev
 
 A dlib precisa ser instalada após a cmake. Caso dê erro, tente fazer manualmente.
 
+Instale todas as dependências com:
+```
+pip3 install -r requirements.txt
+```
 Para navegar entre as imagens de background, pressione "a" ou "d".
 Para parar o código, pressione "q".
 
 ## Downloads 
-- https://github.com/onnx/models/blob/master/vision/body_analysis/emotion_ferplus/README.md
+- Convolutional neural network for emotion recognition in faces: https://github.com/onnx/models/blob/master/vision/body_analysis/emotion_ferplus/README.md
 
 ## Resultado
 ![Readme1](./Imagens/Readme/readme1.png)
