@@ -11,25 +11,28 @@ O algoritmo deve:
 ## Execução
 Para rodar o programa, crie uma venv com o comando:
 
-ˋˋˋ
-virtualenv venv
-ˋˋˋ 
+```
+virtualenv venv 
+```
 
 Para ativar a venv:
 
-ˋˋˋ
+```
 source venv/bin/activate 
-ˋˋˋ
+```
 
 Se der erro na execução, favor verificar se não falta fazer um:
 
-ˋˋˋ
+```
 sudo apt-get install python-dev 
-ˋˋˋ
+```
 ou 
-ˋˋˋ
+```
 sudo apt-get install python3-dev
-ˋˋˋ
+```
+
+A dlib precisa ser instalada após a cmake. Caso dê erro, tente fazer manualmente.
+
 Para navegar entre as imagens de background, pressione "a" ou "d".
 Para parar o código, pressione "q".
 
