@@ -1,0 +1,10 @@
+cmake
+dlib
+numpy
+opencv-python
+bleedfacedetector
+matplotlib
+h5py
+face_recognition
+mediapipe
+cvzone
